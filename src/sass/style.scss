@@ -77,14 +77,35 @@ main{
     padding-top: 120px
 }
 
+.container{
+    &.wide{
+        max-width: 1440px;
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+}
+
+.bg-black{
+    background: $black;
+
+    h1, .heading-1, h2, .heading-2, p{
+        color: $white;
+    }
+}
+
 section{
-    margin: 0 0 2rem 0;
+    padding: 0 0 6rem 0;
+
+
+    &.page-top{
+        border-top: 5px solid $black;
+        padding: 3rem 0;
+    }
 }
 
 .featured-news{
     position: relative;
-    margin-left: -36px;
-    margin-right: -36px;
+    margin-bottom: 2rem;
     height: calc(100vh - 120px);
     background-color: $grey;
 
@@ -124,26 +145,88 @@ section{
     }
 
     p{
+        font-size: 14px;
         margin: 0;
     }
 }
+
+.gallery{
+    img{
+        margin: 0 0 32px 0;
+    }
+}
+
+
+.filters{
+    .nav-item{
+        .nav-link{
+            font-size: 16px;
+            font-weight: 400;
+            color: $black;
+            padding: 0 !important;
+            margin: 0 0 0 46px;
+            transition: color .3s ease-in-out;
+
+            &:hover{
+                color: $cyan;
+            }
+
+            &.active{
+                border-bottom:3px solid $black;
+                font-weight: 800;
+            }
+        }
+    }
+}
+
+.founder{
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .bg-white{
+        padding: 12px 28px;
+        margin-left: -150px;
+
+        .heading-1{
+            margin: 0;
+        }
+    }
+}
+
+.gmap{
+    margin: 6rem 0 12rem 0;
+    width: 100%;
+    height: 680px;
+    background: $grey;
+}
+
+#news{
+    padding-top: 120px;
+    margin-top: -120px;
+}
+
        
 footer{
     border-top: 5px solid $black;
     margin-top: 3rem;
     padding: 3rem 0;
+
+    p{
+        font-size: 14px;
+    }
 }
 
-h1{
+h1, .heading-1{
     font-size: 60px;
     font-weight: 800;
     line-height: 1;
     color: $black;
-    margin: 0 0 1rem 0;
+    margin: 0 0 1.5rem 0;
     transition: color 0.3s ease-in-out;
 }
 
-h2{
+h2, .heading-2{
     font-size: 24px;
     font-weight: 800;
     color: $black;
@@ -152,8 +235,9 @@ h2{
 }
         
 p{
-    font-size:14px;
+    font-size: 22px;
     color: $black;
+    margin: 0 0 2rem 0;
 }
 
 a{

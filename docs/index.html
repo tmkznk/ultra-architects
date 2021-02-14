@@ -19,7 +19,7 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"> <a class="nav-link" id="news" href="news.html">News</a>
+                            <li class="nav-item"> <a class="nav-link" href="index.html#news">News</a>
                             </li>
                             <li class="nav-item"> <a class="nav-link" id="office" href="biuro.html">Biuro</a>
                             </li>
@@ -34,8 +34,8 @@
             </div>
         </nav>
         <main>
-            <div class="container">
-                <section class="featured-news">
+            <div class="container wide px-0">
+                <div class="featured-news">
                     <!-- <img class="img-fluid" src="https://via.placeholder.com/1920x1080?text=&nbsp;"> -->
                     <div class="row"> <a href="#" class="col-md-6 offset-md-6 bg-white">
 
@@ -45,9 +45,11 @@
 
                 </a>
                     </div>
-                </section>
-                <div class="row" data-masonry='{"percentPosition": true }'>
-                    <div class="col-md-4"> <a href="#" class="news">
+                </div>
+            </div>
+            <div class="container">
+                <div class="row" id="news" data-masonry='{"percentPosition": true }'>
+                    <div class="col-md-4"> <a href="projekt.html" class="news">
 
                     <img class="img-fluid mb-3" src="https://via.placeholder.com/435x272?text=&nbsp;">
 
@@ -59,7 +61,7 @@
 
                 </a>
                     </div>
-                    <div class="col-md-4"> <a href="#" class="news">
+                    <div class="col-md-4"> <a href="projekt.html" class="news">
 
                     <img class="img-fluid mb-3" src="https://via.placeholder.com/435x295?text=&nbsp;">
 
@@ -71,7 +73,7 @@
 
                 </a>
                     </div>
-                    <div class="col-md-4"> <a href="#" class="news">
+                    <div class="col-md-4"> <a href="projekt.html" class="news">
 
                     <img class="img-fluid mb-3" src="https://via.placeholder.com/435x259?text=&nbsp;">
 
@@ -81,7 +83,7 @@
 
                 </a>
                     </div>
-                    <div class="col-md-4"> <a href="#" class="news">
+                    <div class="col-md-4"> <a href="projekt.html" class="news">
 
                     <img class="img-fluid mb-3" src="https://via.placeholder.com/435x290?text=&nbsp;">
 
@@ -105,7 +107,7 @@
 
                 </a>
                     </div>
-                    <div class="col-md-4"> <a href="#" class="news">
+                    <div class="col-md-4"> <a href="projekt.html" class="news">
 
                     <img class="img-fluid mb-3" src="https://via.placeholder.com/435x258?text=&nbsp;">
 
@@ -115,7 +117,7 @@
 
                 </a>
                     </div>
-                    <div class="col-md-4"> <a href="#" class="news">
+                    <div class="col-md-4"> <a href="projekt.html" class="news">
 
                     <img class="img-fluid mb-3" src="https://via.placeholder.com/435x725?text=&nbsp;">
 
@@ -125,15 +127,17 @@
 
                 </a>
                     </div>
-                    <div class="col-md-4"> <a href="#" class="news">
+                    <div class="col-md-4"> <a href="projekt.html" class="news">
 
                     <img class="img-fluid mb-3" src="https://via.placeholder.com/435x289?text=&nbsp;">
 
-                    <span class="date">15/10/2018</span><h2>Lorem ipsum dolor sit amet enim</h2>
+                    <span class="date">15/10/2018</span>
+
+                    <h2>Lorem ipsum dolor sit amet enim</h2>
 
                 </a>
                     </div>
-                    <div class="col-md-4"> <a href="#" class="news">
+                    <div class="col-md-4"> <a href="projekt.html" class="news">
 
                     <img class="img-fluid mb-3" src="https://via.placeholder.com/435x327?text=&nbsp;">
 
@@ -145,7 +149,7 @@
 
                 </a>
                     </div>
-                    <div class="col-md-4"> <a href="#" class="news">
+                    <div class="col-md-4"> <a href="projekt.html" class="news">
 
                     <img class="img-fluid mb-3" src="https://via.placeholder.com/435x327?text=&nbsp;">
 
@@ -160,11 +164,13 @@
                 </div>
             </div>
         </main>
-        <footer class="footer container">
-            <p>© 2020 ULTRA-ARCHITECTS.PL · <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+        <div class="container">
+            <footer class="footer">
+                <p>© 2020 ULTRA-ARCHITECTS.PL · <a href="polityka-prywatnosci.html">Polityka prywatności</a>
 
-            </p>
-        </footer>
+                </p>
+            </footer>
+        </div>
         <script src="js/all.js"></script>
         <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     </body>
