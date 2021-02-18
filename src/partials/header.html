@@ -9,7 +9,7 @@
         <title>Ultra Architects</title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+        <nav id="menu" class="navbar navbar-expand-lg fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="index.html">Ultra Architects</a>
 
@@ -40,3 +40,16 @@
                 </div>
             </div>
         </nav>
+
+<script>
+    var menu = document.getElementById('menu');
+    var myCollapsible = document.getElementById('navbarSupportedContent');
+
+    myCollapsible.addEventListener('hide.bs.collapse', function () {
+        menu.classList.remove("is-open");
+    })
+
+    myCollapsible.addEventListener('show.bs.collapse', function () {
+        menu.classList.add("is-open");
+    })
+</script>

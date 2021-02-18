@@ -11,7 +11,7 @@
     </head>
     
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+        <nav id="menu" class="navbar navbar-expand-lg fixed-top">
             <div class="container"> <a class="navbar-brand" href="index.html">Ultra Architects</a>
                 <button
                 class="hamburger hamburger--spin navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -36,17 +36,29 @@
                     </div>
             </div>
         </nav>
+        <script>
+            var menu = document.getElementById('menu');
+            var myCollapsible = document.getElementById('navbarSupportedContent');
+        
+            myCollapsible.addEventListener('hide.bs.collapse', function () {
+                menu.classList.remove("is-open");
+            })
+        
+            myCollapsible.addEventListener('show.bs.collapse', function () {
+                menu.classList.add("is-open");
+            })
+        </script>
         <main>
             <div class="container">
                 <section class="page-top"></section>
                 <section>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 d-none d-md-block">
                             <img class="img-fluid mb-3" src="https://via.placeholder.com/584x877?text=&nbsp;">
                         </div>
                         <div class="col-md-6">
                              <h1 class="heading-1">Nie jest ważne ile ton betonu zużyjesz w&nbsp;życiu, ważne jest jak</h1>
-                             <h2 class="heading-3 mb-5">Jan Kaplicky FUTURE SYSTEMS</h2>
+                             <h2 class="heading-3 mb-3 mb-md-5">Jan Kaplicky FUTURE SYSTEMS</h2>
                             <p>Słowa te, wypowiedziane na jednym z wykładów przez nieżyjącego już czeskiego
                                 architekta Jana Kaplickiego, są mottem, które przyświeca działalności biura
                                 Ultra Architects. Nasze projekty wynikają ze starannej analizy kontekstu
@@ -72,13 +84,13 @@
                      <h2 class="heading-1">Założyciele</h2>
                     <div class="row">
                         <div class="col-md-6 founder">
-                            <img class="img-fluid" src="https://via.placeholder.com/435x258?text=&nbsp;">
+                            <img class="img-fluid mb-3 mb-md-0" src="https://via.placeholder.com/435x258?text=&nbsp;">
                             <div class="bg-white">
                                 <p class="heading-1">Marcin Kościuch</p>
                             </div>
                         </div>
                         <div class="col-md-6 founder">
-                            <img class="img-fluid" src="https://via.placeholder.com/435x258?text=&nbsp;">
+                            <img class="img-fluid mb-3 mb-md-0" src="https://via.placeholder.com/435x258?text=&nbsp;">
                             <div class="bg-white">
                                 <p class="heading-1">Tomasz Osięgłowski</p>
                             </div>
@@ -88,38 +100,38 @@
                 <section>
                      <h2 class="heading-1">Zespół</h2>
                     <div class="row">
-                        <div class="col-md-3 mb-4">
-                            <img class="img-fluid mb-3" src="https://via.placeholder.com/320x190?text=&nbsp;">
+                        <div class="col-6 col-md-3 mb-3 mb-md-4 pe-1 pe-md-3 team-member">
+                            <img class="img-fluid mb-2 mb-md-3" src="https://via.placeholder.com/320x190?text=&nbsp;">
                             <p class="heading-3">Przemysław Fedorczuk</p>
                         </div>
-                        <div class="col-md-3 mb-4">
-                            <img class="img-fluid mb-3" src="https://via.placeholder.com/320x190?text=&nbsp;">
+                        <div class="col-6 col-md-3 mb-3 mb-md-4 ps-1 ps-md-3 team-member">
+                            <img class="img-fluid mb-2 mb-md-3" src="https://via.placeholder.com/320x190?text=&nbsp;">
                             <p class="heading-3">Łukasz Piszczałka</p>
                         </div>
-                        <div class="col-md-3 mb-4">
-                            <img class="img-fluid mb-3" src="https://via.placeholder.com/320x190?text=&nbsp;">
+                        <div class="col-6 col-md-3 mb-3 mb-md-4 pe-1 pe-md-3 team-member">
+                            <img class="img-fluid mb-2 mb-md-3" src="https://via.placeholder.com/320x190?text=&nbsp;">
                             <p class="heading-3">Alicja Wilczyńska</p>
                         </div>
-                        <div class="col-md-3 mb-4">
-                            <img class="img-fluid mb-3" src="https://via.placeholder.com/320x190?text=&nbsp;">
+                        <div class="col-6 col-md-3 mb-3 mb-md-4 ps-1 ps-md-3 team-member">
+                            <img class="img-fluid mb-2 mb-md-3" src="https://via.placeholder.com/320x190?text=&nbsp;">
                             <p class="heading-3">Anna Lipiec</p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3">
-                            <img class="img-fluid mb-3" src="https://via.placeholder.com/320x190?text=&nbsp;">
+                        <div class="col-6 col-md-3 mb-3 mb-md-0 pe-1 pe-md-3 team-member">
+                            <img class="img-fluid mb-2 mb-md-3" src="https://via.placeholder.com/320x190?text=&nbsp;">
                             <p class="heading-3">Mateusz Jóźwiak</p>
                         </div>
-                        <div class="col-md-3">
-                            <img class="img-fluid mb-3" src="https://via.placeholder.com/320x190?text=&nbsp;">
+                        <div class="col-6 col-md-3 mb-3 mb-md-0 ps-1 ps-md-3 team-member">
+                            <img class="img-fluid mb-2 mb-md-3" src="https://via.placeholder.com/320x190?text=&nbsp;">
                             <p class="heading-3">Roderyk Milik</p>
                         </div>
-                        <div class="col-md-3">
-                            <img class="img-fluid mb-3" src="https://via.placeholder.com/320x190?text=&nbsp;">
+                        <div class="col-6 col-md-3 team-member pe-1 pe-md-3">
+                            <img class="img-fluid mb-2 mb-md-3" src="https://via.placeholder.com/320x190?text=&nbsp;">
                             <p class="heading-3">Anna Winna</p>
                         </div>
-                        <div class="col-md-3">
-                            <img class="img-fluid mb-3" src="https://via.placeholder.com/320x190?text=&nbsp;">
+                        <div class="col-6 col-md-3 team-member ps-1 ps-md-3">
+                            <img class="img-fluid mb-2 mb-md-3" src="https://via.placeholder.com/320x190?text=&nbsp;">
                             <p class="heading-3">Małgorzata Tonder</p>
                         </div>
                     </div>

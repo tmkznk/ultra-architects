@@ -11,7 +11,7 @@
     </head>
     
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+        <nav id="menu" class="navbar navbar-expand-lg fixed-top">
             <div class="container"> <a class="navbar-brand" href="index.html">Ultra Architects</a>
                 <button
                 class="hamburger hamburger--spin navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -36,15 +36,27 @@
                     </div>
             </div>
         </nav>
+        <script>
+            var menu = document.getElementById('menu');
+            var myCollapsible = document.getElementById('navbarSupportedContent');
+        
+            myCollapsible.addEventListener('hide.bs.collapse', function () {
+                menu.classList.remove("is-open");
+            })
+        
+            myCollapsible.addEventListener('show.bs.collapse', function () {
+                menu.classList.add("is-open");
+            })
+        </script>
         <main>
-            <div class="container wide px-0">
+            <div class="container wide px-md-0">
                 <div class="featured-news">
-                    <!-- <img class="img-fluid" src="https://via.placeholder.com/1920x1080?text=&nbsp;"> -->
+                    <img class="img-fluid d-md-none mb-3" src="https://via.placeholder.com/1920x1080?text=&nbsp;">
                     <div class="row"> <a href="#" class="col-md-6 offset-md-6 bg-white">
 
                     <h3 class="mb-0">rok 2018</h3>
 
-                    <h1 class="mb-0">Biurowiec przy ulicy Za Bramką</h1>
+                    <h1 class="mb-4 mb-md-0">Biurowiec przy ulicy Za Bramką</h1>
 
                 </a>
                     </div>

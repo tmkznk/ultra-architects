@@ -11,7 +11,7 @@
     </head>
     
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+        <nav id="menu" class="navbar navbar-expand-lg fixed-top">
             <div class="container"> <a class="navbar-brand" href="index.html">Ultra Architects</a>
                 <button
                 class="hamburger hamburger--spin navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -36,18 +36,37 @@
                     </div>
             </div>
         </nav>
+        <script>
+            var menu = document.getElementById('menu');
+            var myCollapsible = document.getElementById('navbarSupportedContent');
+        
+            myCollapsible.addEventListener('hide.bs.collapse', function () {
+                menu.classList.remove("is-open");
+            })
+        
+            myCollapsible.addEventListener('show.bs.collapse', function () {
+                menu.classList.add("is-open");
+            })
+        </script>
         <main>
             <div class="container">
                 <section class="page-top">
                     <div class="row align-items-center">
-                        <div class="col-md-4">
+                        <div class="col-6 col-md-4">
                              <h1 class="mb-0">Projekty</h1>
                         </div>
-                        <div class="col-md-8">
-                            <ul class="nav justify-content-end filters">
+                        <div class="col-6 col-md-8 text-end">
+                            <select>
+                                <option>Wszystkie</option>
+                                <option>Zrealizowane</option>
+                                <option>Domy</option>
+                                <option>Lorem ipsum</option>
+                                <option>Dolor sit</option>
+                            </select>
+                            <ul class="nav justify-content-end filters d-none d-md-flex">
                                 <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">Wszystkie</a>
                                 </li>
-                                <li class="nav-item"> <a class="nav-link" href="#">Zdrealizowane</a>
+                                <li class="nav-item"> <a class="nav-link" href="#">Zrealizowane</a>
                                 </li>
                                 <li class="nav-item"> <a class="nav-link" href="#">Domy</a>
                                 </li>
