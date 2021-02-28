@@ -92,15 +92,15 @@ main{
     }
 }
 
-.container{
-    &.wide{
-        @include media-breakpoint-up(md){
-            max-width: 1440px;
-            padding-left: 36px;
-            padding-right: 36px;
-        }
-    }
-}
+// .container{
+//     &.wide{
+//         @include media-breakpoint-up(md){
+//             // max-width: 1440px;
+//             padding-left: 36px;
+//             padding-right: 36px;
+//         }
+//     }
+// }
 
 .bg-black{
     background: $black;
@@ -160,11 +160,16 @@ section{
 }
     
 .news{
+    visibility: hidden;
     display: block;
     margin-bottom: 26px;
 
     @include media-breakpoint-up(md){
         margin-bottom: 32px;
+    }
+
+    &.animate__fadeInUp{
+        visibility: visible;
     }
 
     &:hover{
