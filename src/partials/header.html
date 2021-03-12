@@ -8,13 +8,14 @@
         <link rel="icon" href="./img/icon.png">
         <title>Ultra Architects</title>
         <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
+        <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     </head>
     <body>
         <nav id="menu" class="navbar navbar-expand-lg fixed-top">
-            <div class="container">
+            <div class="container" id="nav-container">
                 <a class="navbar-brand" href="index.html">Ultra Architects</a>
 
-                <button class="hamburger hamburger--spin navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="hamburger hamburger--spin navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="hamburger-box">
                       <span class="hamburger-inner"></span>
                     </span>
@@ -41,16 +42,3 @@
                 </div>
             </div>
         </nav>
-
-<script>
-    var menu = document.getElementById('menu');
-    var myCollapsible = document.getElementById('navbarSupportedContent');
-
-    myCollapsible.addEventListener('hide.bs.collapse', function () {
-        menu.classList.remove("is-open");
-    })
-
-    myCollapsible.addEventListener('show.bs.collapse', function () {
-        menu.classList.add("is-open");
-    })
-</script>

@@ -1,78 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="icon" href="./img/icon.png">
-        <title>Ultra Architects</title>
-        <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
-    </head>
-    
-    <body>
-        <nav id="menu" class="navbar navbar-expand-lg fixed-top">
-            <div class="container"> <a class="navbar-brand" href="index.html">Ultra Architects</a>
-                <button
-                class="hamburger hamburger--spin navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation"> <span class="hamburger-box">
-
-                      <span class="hamburger-inner"></span></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"> <a class="nav-link" href="index.html#news">News</a>
-                            </li>
-                            <li class="nav-item"> <a class="nav-link" id="office" href="biuro.html">Biuro</a>
-                            </li>
-                            <li class="nav-item"> <a class="nav-link" id="projects" href="projekty.html">Projekty</a>
-                            </li>
-                            <li class="nav-item"> <a class="nav-link" id="contact" href="kontakt.html">Kontakt</a>
-                            </li>
-                            <li class="nav-item"> <a class="nav-link lang" href="#">En</a>
-                            </li>
-                        </ul>
-                    </div>
-            </div>
-        </nav>
-        <script>
-            var menu = document.getElementById('menu');
-            var myCollapsible = document.getElementById('navbarSupportedContent');
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" href="css/style.css"><link rel="icon" href="./img/icon.png"><title>Ultra Architects</title><script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script><script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script></head><body><nav id="menu" class="navbar navbar-expand-lg fixed-top"><div class="container" id="nav-container"><a class="navbar-brand" href="index.html">Ultra Architects</a> <button class="hamburger hamburger--spin navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ms-auto mb-2 mb-lg-0"><li class="nav-item"><a class="nav-link" href="index.html#news">News</a></li><li class="nav-item"><a class="nav-link" id="office" href="biuro.html">Biuro</a></li><li class="nav-item"><a class="nav-link" id="projects" href="projekty.html">Projekty</a></li><li class="nav-item"><a class="nav-link" id="contact" href="kontakt.html">Kontakt</a></li><li class="nav-item"><a class="nav-link lang" href="#">En</a></li></ul></div></div></nav><script>function initMap() {
+                const ultraArchitects = { lat: 52.4051577, lng: 16.9271923 };
         
-            myCollapsible.addEventListener('hide.bs.collapse', function () {
-                menu.classList.remove("is-open");
-            })
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 15,
+                    center: ultraArchitects,
+                    styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
+                });
+            
+                const marker = new google.maps.Marker({
+                    position: ultraArchitects,
+                    map: map,
+                });
+            }</script><main><div class="container"><section class="page-top"><h1 class="animate__animated">Kontakt</h1></section><p class="animate__animated">ul. Piekary 19/704, 61-823 Poznań, Polska<br>tel. 61 851 96 67<br>e-mail: <a href="mailto:biuro@ultra-architects.com">biuro@ultra-architects.com</a></p><div class="gmap animate__animated" id="map"></div></div></main><script>var isInViewport = function(elem) {
+                var distance = elem.getBoundingClientRect();
+                return (
+                    distance.bottom <= ((window.innerHeight + distance.height - 100) || (document.documentElement.clientHeight + distance.height -100)) 
+                );
+            };
         
-            myCollapsible.addEventListener('show.bs.collapse', function () {
-                menu.classList.add("is-open");
-            })
-        </script>
-        <main>
-            <div class="container">
-                <section class="page-top">
-                     <h1>Kontakt</h1>
-                </section>
-                <p>ul. Piekary 19/704, 61-823 Poznań, Polska
-                    <br />tel. 61 851 96 67
-                    <br />e-mail: <a href="mailto:biuro@ultra-architects.com">biuro@ultra-architects.com</a>
-                </p>
-                <div class="gmap"></div>
-            </div>
-        </main>
-        <script>
+            var showItem = function () {
+                var findMe = document.querySelectorAll('.animate__animated');    
+                findMe.forEach(element => {
+                    if (isInViewport(element)) {
+                        element.classList.add("animate__fadeInUp");
+                    }
+                });
+            };
+        
+            window.addEventListener('scroll', showItem, false);
+            showItem();
+            
             document.getElementById("contact").classList.add("active");
-        </script>
-        <div class="container">
-            <footer class="footer">
-                <p>© 2020 ULTRA-ARCHITECTS.PL · <a href="polityka-prywatnosci.html">Polityka prywatności</a>
-
-                </p>
-            </footer>
-        </div>
-        <script src="js/all.js"></script>
-        <!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script> -->
-    </body>
-
-</html>
+            document.getElementById("nav-container").classList.add("with-line");</script><div class="container"><footer class="footer"><div class="row"><div class="col-md-6"><p>© 2020 ULTRA-ARCHITECTS.PL · <a href="polityka-prywatnosci.html">Polityka prywatności</a></p></div><div class="col-md-6 text-md-end mt-3 mt-md-0"><a href="#" class="me-3 me-md-0 ms-md-5"><img src="./img/fb.svg"></a><a href="#" class="me-3 me-md-0 ms-md-5"><img src="./img/ig.svg"></a></div></div></footer></div><script src="js/all.js"></script></body></html><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbX5mfc90PlQiISEe0ccV4cL8ytE6znHQ&callback=initMap&libraries=&v=weekly" async></script>

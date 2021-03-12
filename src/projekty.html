@@ -8,7 +8,7 @@
                     <h1 class="mb-0">Projekty</h1>
                 </div>
                 <div class="col-6 col-md-8 text-end">
-                    <select>
+                    <select class="d-md-none">
                         <option>Wszystkie</option>
                         <option>Zrealizowane</option>
                         <option>Domy</option>
@@ -37,66 +37,66 @@
             </div>
         </section>
 
-        <div class="row" data-masonry='{"percentPosition": true }'>
+        <div class="row masonry-layout">
             <div class="col-md-4">
-                <a href="projekt.html" class="news">
-                    <img class="img-fluid mb-3" src="https://via.placeholder.com/435x272?text=&nbsp;">
+                <a href="projekt.html" class="news animate__animated">
+                    <img class="img-fluid mb-3" src="./img/img1.jpg">
                     <h3>Budynek mieszkalny w Poznaniu</h3>
                 </a>
             </div>
             
             <div class="col-md-4">
-                <a href="projekt.html" class="news">
-                    <img class="img-fluid mb-3" src="https://via.placeholder.com/435x295?text=&nbsp;">
+                <a href="projekt.html" class="news animate__animated">
+                    <img class="img-fluid mb-3" src="./img/img2.jpg">
                     <h3>Nowa realizacja w Zielonej Górze!</h3>
                 </a>
             </div>
             
             <div class="col-md-4">
-                <a href="projekt.html" class="news">
-                    <img class="img-fluid mb-3" src="https://via.placeholder.com/435x259?text=&nbsp;">
+                <a href="projekt.html" class="news animate__animated">
+                    <img class="img-fluid mb-3" src="./img/img3.jpg">
                     <h3>Hotel w Poznaniu</h3>
                 </a>
             </div>
             
             <div class="col-md-4">
-                <a href="projekt.html" class="news">
-                    <img class="img-fluid mb-3" src="https://via.placeholder.com/435x290?text=&nbsp;">
+                <a href="projekt.html" class="news animate__animated">
+                    <img class="img-fluid mb-3" src="./img/img4.jpeg">
                     <h3>Lorem ipsum dolor sit amet enim</h3>
                 </a>
             </div>
             
             <div class="col-md-4">
-                <a href="projekt.html" class="news">
-                    <img class="img-fluid mb-3" src="https://via.placeholder.com/435x258?text=&nbsp;">
+                <a href="projekt.html" class="news animate__animated">
+                    <img class="img-fluid mb-3" src="./img/img5.jpg">
                     <h3>Quisque lorem tortor fringilla</h3>
                 </a>
             </div>
             
             <div class="col-md-4">
-                <a href="projekt.html" class="news">
-                    <img class="img-fluid mb-3" src="https://via.placeholder.com/435x725?text=&nbsp;">
+                <a href="projekt.html" class="news animate__animated">
+                    <img class="img-fluid mb-3" src="./img/img6.jpeg">
                     <h3>Quisque lorem tortor fringilla</h3>
                 </a>
             </div>
             
             <div class="col-md-4">
-                <a href="projekt.html" class="news">
-                    <img class="img-fluid mb-3" src="https://via.placeholder.com/435x289?text=&nbsp;">
+                <a href="projekt.html" class="news animate__animated">
+                    <img class="img-fluid mb-3" src="./img/img7.jpeg">
                     <h3>Lorem ipsum dolor sit amet enim</h3>
                 </a>
             </div>
                     
             <div class="col-md-4">
-                <a href="projekt.html" class="news">
-                    <img class="img-fluid mb-3" src="https://via.placeholder.com/435x327?text=&nbsp;">
+                <a href="projekt.html" class="news animate__animated">
+                    <img class="img-fluid mb-3" src="./img/img8.jpg">
                     <h3>Eurbuild awards for architecture</h3>
                 </a>
             </div>
             
             <div class="col-md-4">
-                <a href="projekt.html" class="news">
-                    <img class="img-fluid mb-3" src="https://via.placeholder.com/435x327?text=&nbsp;">
+                <a href="projekt.html" class="news animate__animated">
+                    <img class="img-fluid mb-3" src="./img/img9.jpg">
                     <h3>Quisque lorem tortor fringilla</h3>
                 </a>
             </div>
@@ -105,8 +105,9 @@
     </div>
 </main>
 
-<script>
+<script>    
     document.getElementById("projects").classList.add("active");
-</script>    
+    document.getElementById("nav-container").classList.add("with-line");
+</script>
 
 <partial src="footer.html"></partial>

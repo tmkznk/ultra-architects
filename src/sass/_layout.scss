@@ -1,11 +1,72 @@
 body{
     font-family: 'Nunito Sans',sans-serif;
 }
+
+.hamburger {
+
+    .hamburger-box{
+        width: 24px;
+    
+        .hamburger-inner{
+            right: 0;
+            width: 24px;
+    
+            &::before {
+                right: 0;    
+                width: 24px;
+            }
+        
+            &::after {
+                right: 0;
+                width: 24px;
+            }
+        }
+    }
+
+    &.collapsed{
+        .hamburger-box{
+            width: 24px;
+        
+            .hamburger-inner{
+                right: 0;
+                width: 16px;
+        
+                &::before {
+                    right: 0;    
+                    width: 8px;
+                }
+            
+                &::after {
+                    right: 0;
+                    width: 24px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
     
 .navbar{
     padding:19px 0;
     background-color: $white;
     transition: background-color 0.3s ease-in-out;
+    
+    .with-line{
+        position: relative;
+
+        &::before{
+            content: '';
+            position: absolute;
+            left: 16px;
+            bottom: -19px;
+            right: 16px;
+            background: $black;
+            height: 5px;
+        }
+    }
 
     .navbar-brand{
         padding-top: 0;
@@ -16,7 +77,11 @@ body{
         text-transform: uppercase;
         color: $black;
 
-        @include media-breakpoint-up(md){
+        @include media-breakpoint-up(lg){
+            font-size: 40px;
+        }
+
+        @include media-breakpoint-up(xl){
             font-size: 55px;
         }
     }
@@ -27,31 +92,74 @@ body{
         padding-top: 5px;
     }
 
+    .navbar-nav{
+        height: calc(100vh - 68px);
+        justify-content: center;
+
+        @include media-breakpoint-up(lg){
+            height: auto;
+            justify-content: initial;
+        }
+    }
+
     .nav-item{
         .nav-link{
-            font-size: 22px;
+            position: relative;
+            font-size: 34px;
             font-weight: 800;
             color: $black;
             padding: 0 !important;
-            margin: 0.5rem 0;
+            margin: 1rem 0;
             transition: color .3s ease-in-out;
             text-align: center;
 
-            @include media-breakpoint-up(md){
+            @include media-breakpoint-up(lg){
+                font-size: 22px;
+                margin: 0 0 0 30px;
+            }
+
+            @include media-breakpoint-up(xl){
+                margin: 0 0 0 48px;
+            }
+
+            @include media-breakpoint-up(xxl){
                 margin: 0 0 0 58px;
+            }
+
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: -3px;
+                left: 0;
+                width: 0;
+                height: 3px;
+                background: $black;
+                transition: all 0.3s ease-in-out;
             }
 
             &:hover{
                 color: $cyan;
+
+                &::before{
+                    width: 100%;
+                    background: $cyan;
+                }
             }
 
             &.active{
-                border-bottom:3px solid $black;
+                &::before{
+                    width: 100%;
+                    background: $black;
+                }
             }
 
             &.lang{
                 &:hover{
-                    color: $yellow;
+                    color: $yellow;   
+
+                    &::before{
+                        background: $yellow !important;
+                    }
                 }
             }
         }
@@ -87,20 +195,14 @@ body{
 main{
     padding-top: 68px;
 
-    @include media-breakpoint-up(md){
+    @include media-breakpoint-up(lg){
+        padding-top: 98px;
+    }
+
+    @include media-breakpoint-up(xl){
         padding-top: 120px;
     }
 }
-
-// .container{
-//     &.wide{
-//         @include media-breakpoint-up(md){
-//             // max-width: 1440px;
-//             padding-left: 36px;
-//             padding-right: 36px;
-//         }
-//     }
-// }
 
 .bg-black{
     background: $black;
@@ -114,11 +216,14 @@ section{
     padding: 0 0 1rem 0;
 
     @include media-breakpoint-up(md){
+        padding: 0 0 3rem 0;
+    }
+
+    @include media-breakpoint-up(lg){
         padding: 0 0 6rem 0;
     }
 
     &.page-top{
-        border-top: 5px solid $black;
         padding: 1rem 0;
 
         @include media-breakpoint-up(md){
@@ -129,24 +234,23 @@ section{
 
 .featured-news{
     position: relative;
-    // margin-bottom: 2rem;
-    // height: calc(100vh - 120px);
-    // background-color: $grey;
-
+    
     @include media-breakpoint-up(md){
         margin-bottom: 2rem;
         height: calc(100vh - 120px);
-        background-color: $grey;
+        background-image: url('../img/main.jpg');
+        background-size: cover;
+        background-position: center;
     }
 
-    .row{
+    .container-container{
         @include media-breakpoint-up(md){
+            width: 100%;
             position: absolute;
-            left: 48px;
-            right: 48px;
+            left: 0;
             bottom: 36px;
-    
-            a.col-md-6{
+
+            .bg-white{
                 padding: 24px 32px;
     
                 &:hover{
@@ -158,18 +262,21 @@ section{
         }
     }
 }
+
+.animate__animated{
+    visibility: hidden;
+
+    &.animate__fadeInUp{
+        visibility: visible;
+   }
+}
     
 .news{
-    visibility: hidden;
     display: block;
     margin-bottom: 26px;
 
     @include media-breakpoint-up(md){
         margin-bottom: 32px;
-    }
-
-    &.animate__fadeInUp{
-        visibility: visible;
     }
 
     &:hover{
@@ -238,6 +345,10 @@ section{
         position: relative;
         display: flex;
         align-items: center;
+
+        img{
+            max-width: 435px;
+        }
     
         .bg-white{
             padding: 12px 28px;
@@ -301,14 +412,34 @@ footer{
             font-size: 14px;
         }
     }
-
-
 }
 
 span.year{
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 24px;
-    border-bottom: 5px solid $black;
+    display: block;
+    font-size: 16px;
     padding-bottom: 10px;
+    
+    @include media-breakpoint-up(md){
+        vertical-align: middle;
+        font-size: 24px;
+        border-bottom: 5px solid $black;
+    }
 }
+
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100px, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+}
+  
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+  
